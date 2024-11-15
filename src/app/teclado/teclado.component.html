@@ -1,0 +1,15 @@
+<!-- teclado.component.html -->
+<div class="keyboard">
+    <div class="keyboard__row">
+      <button *ngFor="let key of row1" class="key" [class.active]="isKeyActive(key)" (mousedown)="activateKey(key)" (mouseup)="deactivateKey()">{{ key }}</button>
+    </div>
+    <div class="keyboard__row">
+      <button *ngFor="let key of row2" class="key" [class.active]="isKeyActive(key)" (mousedown)="activateKey(key)" (mouseup)="deactivateKey()">{{ key }}</button>
+    </div>
+    <div class="keyboard__row">
+      <button *ngFor="let key of row3" class="key" [class.active]="isKeyActive(key)" (mousedown)="activateKey(key)" (mouseup)="deactivateKey()">{{ key }}</button>
+    </div>
+    <div class="keyboard_row keyboard_row--bottom ">
+      <button class="key key--space" [class.active]="isKeyActive(' ')" (mousedown)="activateKey(' ')" (mouseup)="deactivateKey()">Espacio</button>
+    </div>
+  </div>

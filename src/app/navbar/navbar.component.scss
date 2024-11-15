@@ -1,0 +1,34 @@
+   /* Fondo y color del navbar */
+   .navbar {
+    background-color: #004466;
+  }
+
+  .nav-item{
+    height: 50px;
+    margin-left: 300px;
+  }
+  
+
+  /* Color de los enlaces */
+  .navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  /* Efecto hover en los enlaces */
+  .navbar .nav-link:hover {
+    color: #ffcc00;
+  }
+
+  /* Estilos del logotipo */
+  .navbar-brand {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+
+  /* Efecto hover en el logotipo */
+  .navbar-brand:hover {
+    color: #ffffff;
+  }

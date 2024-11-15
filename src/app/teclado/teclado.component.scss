@@ -1,0 +1,50 @@
+
+/* Keyboard Styles */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.keyboard__row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.keyboard__row--bottom {
+  display: flex;
+  justify-content: center;
+}
+
+/* Key Styles */
+.key {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.key:hover {
+  background-color: #d4d4d4;
+}
+
+.key:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.key--space {
+  width: 250px;
+  margin-left: 44%;
+}
+
+.key.active {
+  background-color: #004466;
+  color: white;
+}

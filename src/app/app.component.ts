@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LeccionComponent } from './leccion/leccion.component';
-import { LoginComponent } from "./login/login.component";
-import { RegistrarComponent } from "./registrar/registrar.component";
-import { TemporizadorComponent } from "./temporizador/temporizador.component";
+import { SharedModule } from './shared/shared/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LeccionComponent, LoginComponent, RegistrarComponent, TemporizadorComponent],
+  imports: [RouterOutlet, SharedModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

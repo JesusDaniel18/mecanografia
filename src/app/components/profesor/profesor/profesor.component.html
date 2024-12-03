@@ -1,0 +1,49 @@
+<app-pronavbar></app-pronavbar>
+
+<div class="container mt-4">
+    <h2>Lecciones Registradas</h2>
+  
+    
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" id="titulo" [(ngModel)]="nuevoTitulo" placeholder="Título de la lección">
+    </div>
+  
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción</label>
+      <textarea class="form-control" id="descripcion" [(ngModel)]="nuevaDescripcion" placeholder="Descripción de la lección"></textarea>
+    </div>
+  
+    <div class="mb-3">
+      <label for="textoLeccion" class="form-label">Texto de la Lección</label>
+      <textarea class="form-control" id="textoLeccion" [(ngModel)]="nuevoTextoLeccion" placeholder="Texto para la lección"></textarea>
+    </div>
+  
+    <div class="mb-3">
+      <label for="nivelDificultad" class="form-label">Nivel de Dificultad</label>
+      <select class="form-control" id="nivelDificultad" [(ngModel)]="nuevoNivelDificultad">
+        <option value="Principiante">Principiante</option>
+        <option value="Intermedio">Intermedio</option>
+        <option value="Avanzado">Avanzado</option>
+      </select>
+    </div>
+  <button class="btn btn-primary mb-4" (click)="agregarLeccion()">Agregar Nueva Lección</button>
+  
+    <div *ngIf="lecciones.length > 0">
+      <h3>Listado de Lecciones</h3>
+      <ul class="list-group">
+        <li *ngFor="let leccion of lecciones" class="list-group-item mb-3">
+          <h5>{{ leccion.Titulo }}</h5>
+          <p>{{ leccion.Descripcion }}</p>
+          <p><strong>Texto:</strong> {{ leccion.TextoLeccion }}</p>
+          <p><strong>Nivel:</strong> {{ leccion.NivelDificultad }} | <strong>Creado el:</strong> {{ leccion.FechaCreacion | date: 'dd/MM/yyyy HH:mm' }}</p>
+          <button class="btn btn-danger"(click)="eliminarLeccion(leccion.LeccionID)" >Eliminar leccion</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="lecciones.length === 0">
+      <p>No hay lecciones registradas.</p>
+    </div>
+  </div>
+  

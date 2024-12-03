@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TecladoComponent } from "../teclado/teclado.component";
 import { NavbarComponent } from '../navbar/navbar.component';
-import { FooterComponent } from "../footer/footer.component";
+import { FooterComponent } from "../../generals/footer/footer.component";
 import { TemporizadorComponent } from "../temporizador/temporizador.component";
 
 @Component({

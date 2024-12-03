@@ -4,30 +4,25 @@
       <h2 class="text-center">Crear Cuenta</h2>
       <p class="text-center text-muted">Por favor, completa los campos para registrarte</p>
   
-      <form>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <!-- Campo de Nombre de Usuario con icono -->
         <div class="mb-3 input-icon">
           <i class="bi bi-person-fill"></i>
-          <input type="text" class="form-control" id="username" placeholder="Nombre de usuario">
+          <input type="text" class="form-control" id="username" formControlName="NombreUsuario" placeholder="Nombre de usuario">
         </div>
   
         <!-- Campo de Email con icono -->
         <div class="mb-3 input-icon">
           <i class="bi bi-envelope-fill"></i>
-          <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
+          <input type="email" class="form-control" id="email" formControlName="Correo" placeholder="Correo electrónico">
         </div>
   
         <!-- Campo de Contraseña con icono -->
         <div class="mb-3 input-icon">
           <i class="bi bi-lock-fill"></i>
-          <input type="password" class="form-control" id="password" placeholder="Contraseña">
+          <input type="password" class="form-control" id="password" formControlName="Contrasena" placeholder="Contraseña">
         </div>
   
-        <!-- Campo de Confirmar Contraseña con icono -->
-        <div class="mb-3 input-icon">
-          <i class="bi bi-lock-fill"></i>
-          <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar contraseña">
-        </div>
   
         <!-- Botón de Registro -->
         <button type="submit" class="btn btn-primary w-100">Registrarse</button>

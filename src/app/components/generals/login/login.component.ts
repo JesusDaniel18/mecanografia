@@ -25,7 +25,7 @@ export class LoginComponent {
       response => {
         if (response.access_token) {
           localStorage.setItem('authToken', response.access_token);  
-          this.router.navigate(['/alumno']);  
+          this.router.navigate(['/listadolecciones']);  
         }else{
           this.errorMessage= response.Mensaje;
         }

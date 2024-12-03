@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+
+
+<div *ngIf="lecciones.length > 0">
+    <h3>Listado de Lecciones</h3>
+    <ul class="list-group">
+      <li *ngFor="let leccion of lecciones" class="list-group-item mb-3">
+        <h5>{{ leccion.Titulo }}</h5>
+        <p>{{ leccion.Descripcion }}</p>
+        <p><strong>Texto:</strong> {{ leccion.TextoLeccion }}</p>
+        <p><strong>Nivel:</strong> {{ leccion.NivelDificultad }} | <strong>Creado el:</strong> {{ leccion.FechaCreacion | date: 'dd/MM/yyyy HH:mm' }}</p>
+      <button class="btn btn-primary" (click)="ejecutar(leccion.LeccionID)">Realizar lección</button>
+    </li>
+    </ul>
+
+  </div>
